@@ -6,12 +6,12 @@
 
 Audit docs inventories for stale owners, old updates, and broken review cadence. It solves review drift by turning plain-text plans into deterministic CI-friendly findings.
 
-## Input Contract 25
+## Input Contract
 
 Accepts documentation inventory. The reader supports plain text, JSON, JSONL, and CSV so the
 tool can fit into scripts, CI jobs, and review exports.
 
-## CLI Walkthrough 25
+## CLI Walkthrough
 
 ```bash
 python -m pip install -e ".[dev]"
@@ -20,7 +20,7 @@ docs-freshness-check examples/sample.txt --json --fail-on medium
 python -m docs_freshness_check --help
 ```
 
-## Rule Surface 25
+## Rule Surface
 
 | Rule | Severity | Meaning |
 |---|---:|---|
@@ -28,7 +28,7 @@ python -m docs_freshness_check --help
 | `stale-doc` | medium | doc appears stale |
 | `no-review` | low | review cadence missing |
 
-## Validation Notes 25
+## Validation Notes
 
 ```bash
 ruff check .
